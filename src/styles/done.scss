@@ -1,0 +1,78 @@
+@import "./root&mixin.scss";
+.dones{
+    width: 100%;
+    margin-bottom: 50px;
+    min-height: 800px;
+    max-height: 800px;
+    overflow-y: auto;
+    
+}
+.done {
+    @include todoStyle;
+    background-color: var(--backgroundDone);
+    .topTodo {
+      @include todoBlocks;
+      height: auto;
+      .title {
+        width: 40%;
+        min-height: 100%;
+        height: auto;
+        word-wrap: break-word;
+        overflow-y: auto;
+        padding: 10px;
+      }
+      .edit {
+        @include todoButton;
+        word-wrap: break-word;
+        padding: 10px;
+      }
+      .deleteTodo {
+        @include todoButton;
+  
+        word-wrap: break-word;
+        padding: 10px;
+        width: 30%;
+      }
+    }
+    .middleTodo {
+      @include todoBlocks;
+      .description {
+        height: auto;
+        width: 100%;
+        min-height: 100%;
+        word-wrap: break-word;
+        overflow-y: auto;
+        padding: 10px;
+      }
+      .right {
+        @include todoButton;
+        min-height: 80px;
+      }
+    }
+    .bottomTodo {
+      @include todoBlocks;
+      .userName {
+        width: 40%;
+        min-height: 100%;
+        height: auto;
+      }
+      .time {
+        width: 40%;
+        min-height: 100%;
+        height: auto;
+        text-align: center;
+      }
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .progress {
+      .topTodo {
+        .edit,
+        .deleteTodo {
+          font-size: var(--todo-medium-fonts);
+        }
+      }
+    }
+  }
+  

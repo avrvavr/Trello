@@ -1,0 +1,80 @@
+:root {
+  --franclineFonts: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  --tasksBackground: rgb(122 12 126 / 55%);
+  --countBackground: #32c332;
+  --color-text: #d3da1c;
+  --backgroundTodo: #32c332;
+  --backgroundDone: #114edc;
+  --todo-fonts: 18px;
+  --todo-medium-fonts: 14px;
+  --modal-font-size: 18px;
+  --modal-text-color: black;
+  --background-progress: rgb(202, 202, 202);
+}
+@mixin flexdirection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin count {
+  @include flexdirection;
+  width: 102%;
+  height: 80px;
+  justify-content: space-around;
+  font-size: 25px;
+  border-radius: 10px;
+  position: relative;
+  top: -10px;
+  z-index: 4;
+}
+@mixin todoStyle{
+  margin: 20px auto;
+  width: 80%;
+  min-height: 150px;
+  background-color: var(--backgroundTodo);
+  padding: 4%;
+  border-radius: 20px;
+  position: relative;
+}
+@mixin buttonAdd {
+  @include flexdirection;
+  width: 102%;
+  height: 80px;
+  justify-content: space-around;
+  border-radius: 10px;
+  z-index: 4;
+  position: absolute;
+  bottom: -20px;
+  font-family: var(--franclineFonts);
+}
+@mixin buttonAddHover {
+  height: 90px;
+  background-color: #a200ff;
+  transition: background-color 1s ease 0s;
+}
+
+//Todo mixins
+@mixin todo-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin todoBlocks {
+  @include todo-flex;
+  font-size: var(--todo-fonts);
+  margin: 30px 0;
+}
+@mixin todoButton {
+  @include todo-flex;
+  justify-content: center;
+  font-size: var(--todo-fonts);
+  width: 20%;
+  border-radius: 15px;
+  padding: 2%;
+}
+//modal
+@mixin sizesModal {
+  font-size: var(--modal-font-size);
+  font-family: var(--franclineFonts);
+  border-radius: 5px;
+}

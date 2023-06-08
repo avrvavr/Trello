@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.scss" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="icons">Trello</div>
+      <div class="watch"></div>
+    </div>
+
+    <section class="sectionTasks">
+      <div class="tasks">
+        <div class="countTodo">
+          <div class="countName">TODO:</div>
+          <div class="quantityTodos">0</div>
+        </div>
+        <div class="todos">
+        </div>
+
+        <div class="blockAddTodo">
+          <button class="addTodo">Add todo</button>
+          <div class="modal-wrapper" id="blockAddTodo">
+            <input type="text" class="modalInput" placeholder="Title" id="addTodoInput" />
+            <textarea
+              name=""
+              id="addTodoDescription"
+              cols="30"
+              rows="10"
+              class="modalTextarea"
+              placeholder="Description"
+            ></textarea>
+            <div class="buttomModal">
+              <select class="modalUsers" id="addTodoUsers">
+                </select>
+              <button class="cancelModal" id="addTodoCancel">Cancel</button>
+              <button class="confirmModal" id="addToConfirm">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tasks">
+        <div class="countProgress">
+          <div class="countName">IN PROGRESS</div>
+          <div class="quantityProgress">0</div>
+        </div>
+        <div class="AllProgress">
+        </div>
+            
+      </div>
+      <div class="tasks">
+        <div class="countDone">
+          <div class="countName">Done:</div>
+          <div class="quantityDone">0</div>
+        </div>
+        <div class="dones"></div>
+        <button class="deleteAll">Delete All</button>
+      </div>
+    </section>
+    <div class="warning" id="warning">
+      <div class="warningContent">
+        <div class="warningText">Warning</div>
+        <div class="warningButtons">
+          <button class="warningCansel">Cancel</button>
+          <button class="warningConfirm">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

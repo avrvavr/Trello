@@ -1,0 +1,54 @@
+@import './root&mixin.scss';
+
+.header {
+  width: 90%;
+  max-width: 1700px;
+  height: 200px;
+  margin: 40px auto;
+  background-image: linear-gradient(
+    5deg,
+    #d001a4 0,
+    #b3069e 25%,
+    #940894 50%,
+    #750a89 75%,
+    #590c7e 100%
+  );
+  padding: 1%;
+  @include flexdirection; 
+  justify-content: space-around;
+  border-radius: 30px;
+  font-size: 50px;
+  font-family: var(--franclineFonts);
+
+  .icons {
+    width: 20%;
+    height: 80%;
+    @include flexdirection;
+    color: var(--color-text);
+  }
+  .watch {
+    width: 10%;
+    height: 30%;
+    @include flexdirection;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .header {
+    padding: 0%;
+    font-size: 40px;
+    .watch {
+      width: 20%;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .header {
+    width: 95%;
+    .watch {
+      width: 20%;
+    }
+  }
+}

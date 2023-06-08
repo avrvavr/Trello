@@ -1,0 +1,63 @@
+@import "./root&mixin.scss";
+
+.todo {
+  @include todoStyle;
+  .topTodo {
+    @include todoBlocks;
+    height: auto;
+    .title {
+      width: 50%;
+      min-height: 100%;
+      height: auto;
+      word-wrap: break-word;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    .edit,
+    .deleteTodo {
+      @include todoButton;
+      padding: 2%;
+    }
+  }
+  .middleTodo {
+    @include todoBlocks;
+    .description {
+      height: auto;
+      width: 70%;
+      min-height: 100%;
+      word-wrap: break-word;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    .right {
+      @include todoButton;
+      min-height: 80px;
+    }
+  }
+  .bottomTodo {
+    @include todoBlocks;
+    .userName {
+      width: 40%;
+      min-height: 100%;
+      height: auto;
+    }
+    .time {
+      width: 40%;
+      min-height: 100%;
+      height: auto;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .todo {
+    .topTodo {
+      .edit,
+      .deleteTodo {
+        width: 30%;
+        font-size: var(--todo-medium-fonts);
+      }
+    }
+  }
+}

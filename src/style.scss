@@ -1,0 +1,15 @@
+@import url(./styles/header.scss);
+@import url(./styles/section.scss);
+@import url(./styles/todo.scss);
+@import url(./styles/modalWrapper.scss);
+@import url(./styles/warning.scss);
+@import url(./styles/progress.scss);
+@import url(./styles/done.scss);
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("./image/1612237403_65-p-fioletovie-foni-profilya-steam-78.jpg");
+    background-size: cover;
+}
