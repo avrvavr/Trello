@@ -2,6 +2,8 @@
 
 section {
   margin: 50px auto;
+  position: relative;
+  z-index: 0;
   width: 90%;
   max-width: 1600px;
   height: auto;
@@ -32,8 +34,6 @@ section {
       width: 100%;
       margin-bottom: 60px;
       min-height: 800px;
-      max-height: 800px;
-      overflow-y: auto;
     }
     .countName {
       width: 20%;
